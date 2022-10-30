@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  block-size: 100%;
+  overflow: hidden;
+  height: -webkit-fill-available;
+  scroll-behavior: smooth;
+}
+
+body {
+  block-size: 100%;
+  font-family: "Aboreto", cursive, system-ui, sans-serif;
+  overscroll-behavior: none;
+  background-color: #f1f0ea;
+  color: white;
+}
+
+.main {
+  block-size: 700px;
+  inline-size: 90%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+
+  & > .detail {
+    position: absolute;
+    visibility: hidden;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.picture {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) perspective(300px);
+  border-radius: 30px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+  opactiy: 0;
+}
+
+img,
+.preview {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  width: 250px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

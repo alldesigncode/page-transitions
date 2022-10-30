@@ -1,0 +1,16 @@
+{
+  "name": "page-transitions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gsap": "^3.10.4",
+    "postcss-preset-env": "^7.7.2",
+    "vite": "^3.0.7"
+  }
+}
